@@ -1,4 +1,4 @@
-package com.gtsasil.DevSuperior.dscatalog.exceptions;
+package com.gtsasil.DevSuperior.dscatalog.services.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 
