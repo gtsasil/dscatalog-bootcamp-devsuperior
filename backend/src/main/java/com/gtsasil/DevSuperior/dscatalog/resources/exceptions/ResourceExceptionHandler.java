@@ -1,7 +1,5 @@
 package com.gtsasil.DevSuperior.dscatalog.resources.exceptions;
 
-
-
 import com.gtsasil.DevSuperior.dscatalog.services.exception.DatabaseException;
 import com.gtsasil.DevSuperior.dscatalog.services.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;

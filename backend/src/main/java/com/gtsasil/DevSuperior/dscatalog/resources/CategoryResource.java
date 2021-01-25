@@ -1,7 +1,6 @@
 package com.gtsasil.DevSuperior.dscatalog.resources;
 
 import com.gtsasil.DevSuperior.dscatalog.dto.CategoryDTO;
-import com.gtsasil.DevSuperior.dscatalog.entities.Category;
 import com.gtsasil.DevSuperior.dscatalog.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/categories")

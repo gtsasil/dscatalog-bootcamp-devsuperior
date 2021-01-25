@@ -3,10 +3,6 @@ package com.gtsasil.DevSuperior.dscatalog.dto;
 import com.gtsasil.DevSuperior.dscatalog.entities.Category;
 import com.gtsasil.DevSuperior.dscatalog.entities.Product;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
