@@ -9,14 +9,14 @@ const Home = () => (
     <div className=" row home-content card-base border-radius-20 ">
       <div className="col-6 home-text">
         <h1 className="text-title">
-          Conheça o melhor <br /> catálogo de produtos
+          Discover the best <br /> products catalog
         </h1>
         <p className="text-subtitle">
-          Ajudaremos você a encontrar os melhores
-          <br /> produtos disponíveis no mercado.
+          We will help you find the best
+          <br /> products available in the market.
         </p>
-        <Link to="/catalog">
-          <ButtonIcon text="inicie agora a sua busca " />
+        <Link to="/products">
+          <ButtonIcon text="begin your search" />
         </Link>
       </div>
       <div className="col-6">
