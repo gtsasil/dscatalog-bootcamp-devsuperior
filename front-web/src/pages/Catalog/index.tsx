@@ -1,17 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ProductsResponse } from "../../core/types/Product";
 import { makeRequest } from "../../core/utils/request";
 import ProductCard from "./components/ProductCard";
 import "./styles.scss";
 
 const Catalog = () => {
+  const [productResponse, setProductsResponse] = useState<ProductsResponse>();
+
+  console.log(productResponse);
+
   useEffect(() => {
     const params = {
       page: 0,
       linesPerPage: 12,
     };
+
     makeRequest({ url: "/products", params }).then((response) =>
-      console.log(response)
+      setProductsResponse(response.data)
     );
   }, []);
 
@@ -19,33 +25,11 @@ const Catalog = () => {
     <div className="catalog-container">
       <h1 className="catalog-title">Products Catalog</h1>
       <div className="catalog-products">
-        <Link to="/products/1">
-          <ProductCard />
-        </Link>
-        <Link to="/products/2">
-          <ProductCard />
-        </Link>
-        <Link to="/products/3">
-          <ProductCard />
-        </Link>
-        <Link to="/products/4">
-          <ProductCard />
-        </Link>
-        <Link to="/products/5">
-          <ProductCard />
-        </Link>
-        <Link to="/products/6">
-          <ProductCard />
-        </Link>
-        <Link to="/products/7">
-          <ProductCard />
-        </Link>
-        <Link to="/products/8">
-          <ProductCard />
-        </Link>
-        <Link to="/products/9">
-          <ProductCard />
-        </Link>
+        {productResponse?.content.map((product) => (
+          <Link to="/products/1 " key={product.id}>
+            <ProductCard product={product} />
+          </Link>
+        ))}
       </div>
     </div>
   );
