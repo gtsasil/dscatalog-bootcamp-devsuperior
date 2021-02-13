@@ -2,6 +2,9 @@ package com.gtsasil.DevSuperior.dscatalog.dto;
 
 import com.gtsasil.DevSuperior.dscatalog.entities.User;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,8 +12,12 @@ import java.util.Set;
 public class UserDTO implements Serializable {
 
     private Long Id;
+
+    @NotBlank(message = "Field can't be empty")
     private String firstName;
     private String lastName;
+
+    @Email(message = "Please, insert a valid e-mail")
     private String email;
 
     Set<RoleDTO> roles = new HashSet<>();
