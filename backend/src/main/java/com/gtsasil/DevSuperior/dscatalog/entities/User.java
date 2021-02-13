@@ -15,10 +15,12 @@ public class User implements Serializable {
     private Long Id;
     private String firstName;
     private String lastName;
+
+    @Column(unique = true)
     private String email;
     private String password;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "tb_user_role",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -78,10 +80,10 @@ public class User implements Serializable {
         this.password = password;
     }
 
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public Set<Role> getRoles() {
+        return roles;
     }
+
 
     @Override
     public boolean equals(Object o) {
