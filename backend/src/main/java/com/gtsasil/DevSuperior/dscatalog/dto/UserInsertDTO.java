@@ -1,5 +1,8 @@
 package com.gtsasil.DevSuperior.dscatalog.dto;
 
+import com.gtsasil.DevSuperior.dscatalog.services.validation.UserInsertValid;
+
+@UserInsertValid
 public class UserInsertDTO extends UserDTO{
     private String password;
 
