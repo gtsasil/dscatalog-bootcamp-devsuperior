@@ -28,7 +28,6 @@ public class JwtTokenEnhancer implements TokenEnhancer {
         DefaultOAuth2AccessToken token = (DefaultOAuth2AccessToken) oAuth2AccessToken;
         token.setAdditionalInformation(map);
 
-
         return oAuth2AccessToken;
     }
 }

@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

@@ -47,7 +47,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated");
+        security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
     }
 
     @Override
@@ -65,7 +65,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
         TokenEnhancerChain chain = new TokenEnhancerChain();
         chain.setTokenEnhancers(Arrays.asList(accessTokenConverter, tokenEnhancer));
-
 
         endpoints.authenticationManager(authenticationManager)
                 .tokenStore(tokenStore)
